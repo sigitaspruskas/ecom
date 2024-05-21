@@ -198,7 +198,7 @@ const CheckoutForm: React.FC = () => {
 };
 
 const CheckoutFormWrapper: React.FC = () => {
-  const { checkoutData, setCheckoutData } = useCheckout();
+  const { checkoutData } = useCheckout();
 
   const validate = (values: FormState) => {
     const errors: Partial<FormState> = {};
@@ -271,7 +271,7 @@ const CheckoutFormWrapper: React.FC = () => {
     if (!values.card_name) {
       errors.card_name = "Name on card is required";
     }
-    // console.log(errors);
+
     return errors;
   };
 
